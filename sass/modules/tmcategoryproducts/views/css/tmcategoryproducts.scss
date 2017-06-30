@@ -1,0 +1,98 @@
+@import "../../../../_theme_variables";
+
+.category-block ul.product_list.grid > li.first-in-line, .category-block ul.product_list.grid > li.first-item-of-mobile-line, .category-block ul.product_list.grid > li.first-item-of-tablet-line {
+  clear: none !important;
+}
+
+.category-block {
+  margin-top: 15px;
+  margin-bottom: 0;
+  margin-left: auto!important;
+  margin-right: auto!important;
+
+  @media (min-width: $screen-xs-min) {
+    margin-top: 50px;
+  }
+  @media (min-width: $screen-lg-min) {
+    margin-top: 90px;
+  }
+  h4 {
+    position: relative;
+    font: $font-heading;
+    color: $color-heading;
+    text-align: center;
+    padding-bottom: 12px;
+    margin-bottom: 26px;
+    padding-right: 0;
+    @media (min-width: $screen-lg-min) {
+      margin-bottom: 50px;
+    }
+    &:after {
+      display: none!important;
+    }
+
+    @media (max-width: $screen-xs - 1) {
+      font-size: 20px;
+    }
+  }
+  ul.product_list.grid > li {
+
+    .product-container {
+      background: transparent;
+      .product-image-container {
+        background: transparent;
+      }
+    }
+
+    .functional-buttons {
+      div {
+        > a {
+          color: $color-base;
+          &.wishlist, &.compare {
+            &:before {
+              color: $color-base;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .bx-wrapper {
+    margin: 0 auto!important;
+    overflow: hidden !important;
+  }
+  .bx-viewport{
+    > ul {
+      margin: 0 auto!important;
+      > li {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+  .bx-wrapper .bx-controls-direction a {
+    height: 50px;
+    width: 50px;
+    color: $dark-text-color;
+    text-align: center;
+    &:before {
+      @include addIcon('\f105');
+      font-size: 37px;
+      line-height: 50px;
+      color: inherit;
+    }
+    &.bx-prev {
+      left: 0;
+      &:before {
+        content: '\f104';
+      }
+    }
+    &.bx-next {
+      right: 0;
+    }
+    &:hover {
+      color: $primary-text-color;
+    }
+  }
+}

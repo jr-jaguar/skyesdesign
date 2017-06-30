@@ -1,0 +1,109 @@
+@import 'compass';
+@import 'bootstrap_lib/_variables';
+
+// ------- FONTS -------
+
+$font-family: 'Raleway', sans-serif;
+$font-custom: 'Open Sans', serif;
+$font-alt: 'Roboto', sans-serif;
+$font: normal 16px/26px $font-family;
+$font-heading: 400 33px/1.2 $font-custom;
+$font-maxheading: 300 42px/1.2 $font-custom;
+$font-cms-title: 500 22px/1.2 $font-custom;
+$font-subheading: 400 20px/1.2 $font-custom;
+$font-midheading: 700 20px/1.2 $font-family;
+$fa-font-path: "../fonts";
+$font-icon: "FontAwesome";
+
+// ------- MAIN ICON MIXIN -------
+
+@mixin addIcon($content) {
+  font-family: $font-icon;
+  content: $content;
+  display: inline-block;
+  font-weight: normal;
+}
+
+@mixin addChappsIcon($content, $font-size: inherit) {
+  font-family: "fl-chapps";
+  content: $content;
+  display: inline-block;
+  font-weight: normal;
+  font-size: $font-size;
+}
+
+@mixin addMaterialIcon($content, $font-size: inherit) {
+  font-family: 'Material Icons';
+  content: $content;
+  display: inline-block;
+  font-weight: normal;
+  font-size: $font-size;
+}
+
+// ------- MAIN COLORS --------
+
+$color-base: #827976;
+$color-base-secondary: #a57970;
+$color-primary: #77a03f;
+$color-dark: #000;
+$color-heading: #5b4d4a;
+$color-light: #FFFFFF;
+$color-gray: #e1e1e1;
+$color-gray-darken: #a1a1a1;
+$color-gray-lighten: #ebebeb;
+$color-gray-light: #c4bbb2;
+$color-succes: #cad06b;
+$color-warning: #f13340;
+$color-box: #f6f8f9;
+
+
+// ------- BORDERS ---------
+
+$base-border-color: #ebebeb;
+$table-border-color: $base-border-color;
+$main_border: 1px solid $base-border-color;
+$dark-border-color: $color-dark;
+$light-border-color: $color-light;
+$primary-border-color: $color-primary;
+$secondary-border-color: #eae6da;
+
+// ------- BACKGROUNDS -------
+
+$base-box-bg: $color-box;
+$table-background: $base-box-bg;
+$dark-background: $color-dark;
+$light-background: $color-light;
+$primary-background: $color-primary;
+$olark-heading-bg: $primary-background;
+$product-background: $color-box;
+
+// ------- COLORS -------
+
+$base-body-color: $color-base;
+$base-text-color: $color-base;
+$light-text-color: $color-light;
+$dark-text-color: $color-dark;
+$primary-text-color: $color-primary;
+
+$base-heading-color: $color-heading;
+$base-title-color: $color-heading;
+
+$link-color: $color-base;
+$link-hover-color: $primary-text-color;
+
+// ------- Cart Steps On Page Checkout --------
+
+$cs-border-radius: 0;
+$step-todo-bg: $base-box-bg;
+$step-todo-border-color: darken($step-todo-bg, 15);
+$step-current-bg: $primary-background;
+$step-current-border-color: $step-current-bg;
+$step-done-bg: $dark-background;
+$step-done-border-color: $step-done-bg;
+$step-hover-bg: darken($step-done-bg, 15);
+$step-hover-border-color: darken($step-hover-bg, 15);
+
+// ------- Border radius on --inputs--selects--buttons--itc----------
+
+$border-radius-base: 0px;
+$border-radius-small: 3px;

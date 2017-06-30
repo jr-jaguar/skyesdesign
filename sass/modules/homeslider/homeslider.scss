@@ -1,0 +1,326 @@
+@import "../../_theme_variables";
+
+/******************************************************************************
+						Home Page Slider
+*******************************************************************************/
+$minHeight: 470px;
+$ratio: 0.5208;
+#homepage-slider {
+  overflow: hidden;
+  position: relative;
+  #homeslider {
+    margin: 0 auto;
+    padding: 0;
+    min-height: $minHeight;
+    .homeslider-container {
+      position: relative;
+      @media (max-width: $screen-sm-max) {
+        height: 100%;
+      }
+      .homeslider-image {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .homeslider-description {
+        background: rgba($color-light, .9);
+        padding: 25px 15px;
+        cursor: pointer;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: 0 auto;
+        @include translate(-50%, -50%);
+        text-align: center;
+        max-width: 370px;
+        @media (min-width: $screen-lg-min) {
+          top: 48%;
+          max-width: 900px;
+          padding: 50px 30px;
+          background: $color-light;
+        }
+
+        h3 {
+          font-size: 12px;
+          font-weight: bold;
+          font-family: $font-family;
+          letter-spacing: 1.68px;
+          color: #c4bbb2;
+          text-transform: uppercase;
+          @media (min-width: $screen-sm-min) {
+            font-size: 14px;
+          }
+        }
+        h2 {
+          margin: 0;
+          position: relative;
+          font-size: 18px;
+          line-height: (65 / 45);
+          color: $color-heading;
+          font-family: $font-custom;
+          @media (min-width: $screen-xs-min) {
+            font-size: 20px;
+          }
+          @media (min-width: $screen-sm-min) {
+            font-size: 28px;
+            letter-spacing: -0.5px;
+          }
+          @media (min-width: $screen-lg-min) {
+            font-size: 50px;
+            letter-spacing: -1px;
+          }
+        }
+       p {
+          color: $color-base;
+          position: relative;
+          margin: 0;
+          font-size: 13px;
+          line-height: 14px;
+          @media (min-width: $screen-sm-min) {
+            font-size: 16px;
+          }
+        }
+        .btn {
+          padding: 15px;
+          min-width: 210px;
+          border-radius: 31px;
+          display: inline-block;
+          @media (min-width: $screen-lg-min) {
+            padding: 25px;
+            width: 240px;
+            border-radius: 35px;
+          }
+        }
+        a {
+          position: relative;
+        }
+        * + p {
+          margin-top: 5px;
+          @media (min-width: $screen-sm-min) {
+            margin-top: 25px;
+          }
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+/*****************************************************************************
+						BXSlider Styles
+********************************************************************************/
+//RESET AND LAYOUT
+#homepage-slider {
+  .bx-wrapper {
+    position: relative;
+    padding: 0;
+    *zoom: 1;
+    a {
+      display: block;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      min-height: $minHeight;
+      min-width: ceil($minHeight / $ratio);
+      @media (max-width: $screen-sm-max) {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        @include translate(-50%, -50%);
+      }
+    }
+  }
+  // THEME
+  .bx-wrapper {
+    .bx-viewport {
+      width: 100%;
+      min-height: $minHeight;
+    }
+  }
+  .bx-wrapper .bx-pager,
+  .bx-wrapper .bx-controls-auto {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    z-index: 999;
+  }
+  //LOADER
+  .bx-wrapper .bx-loading {
+    min-height: 50px;
+    background: url(images/bx_loader.gif) center center no-repeat $light-background;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+  }
+  //PAGER
+  .bx-wrapper .bx-pager {
+    text-align: center;
+    font-size: .85em;
+    font-family: $font-family;
+    font-weight: bold;
+    color: #666;
+    padding-top: 20px;
+  }
+  .bx-wrapper .bx-pager .bx-pager-item,
+  .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+    display: inline-block;
+    *zoom: 1;
+    *display: inline;
+  }
+  .bx-wrapper .bx-pager.bx-default-pager a {
+    background: none;
+    border: 3px solid #fff;
+    text-indent: -9999px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    outline: 0;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+  }
+  .bx-wrapper .bx-pager.bx-default-pager a:hover,
+  .bx-wrapper .bx-pager.bx-default-pager a.active {
+    background: #fff;
+  }
+  //DIRECTION CONTROLS (NEXT / PREV)
+  .bx-wrapper .bx-controls-direction a {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    height: 30px;
+    width: 30px;
+    outline: 0;
+    margin: 0;
+    text-align: center;
+    z-index: 999;
+    background: $color-light;
+    @include transform (translate(0, -50%));
+    &:before {
+      @include addIcon('\f104');
+      font-size: 20px;
+      line-height: 30px;
+      color: $color-gray;
+      @include transition(0.3s all ease);
+    }
+
+    @media (min-width: $screen-sm-min) {
+      height: 70px;
+      width: 70px;
+      &:before {
+        line-height: 70px;
+      }
+    }
+
+    &.bx-prev {
+      left: 0;
+    }
+
+    &.bx-next {
+      right: 0;
+      &:before {
+        @include addIcon('\f105');
+      }
+      &:after {
+        position: absolute;
+        content: '';
+        top: 23px;
+        bottom: 23px;
+        left: 0;
+        @include transition(0.3s all ease);
+        @media (min-width: $screen-lg-min) {
+          top: 32px;
+          bottom: 32px;
+        }
+      }
+    }
+    &:hover {
+      background: $base-box-bg;
+      &:before {
+        color: $primary-text-color;
+      }
+    }
+    &:hover {
+      a.bx-next {
+        &:after {
+          top: 0;
+          bottom: 0;
+        }
+      }
+    }
+  }
+  .bx-wrapper .bx-controls-direction a.disabled {
+    display: none;
+  }
+  //AUTO CONTROLS (START / STOP)
+  .bx-wrapper .bx-controls-auto {
+    text-align: center;
+  }
+  .bx-wrapper .bx-controls-auto .bx-start {
+    display: block;
+    width: 10px;
+    height: 11px;
+    outline: 0;
+    margin: 0 3px;
+    &:before {
+      content: '';
+      font-family: $font-icon;
+      color: #fff;
+    }
+  }
+  .bx-wrapper .bx-controls-auto .bx-stop {
+    display: block;
+    width: 9px;
+    height: 11px;
+    outline: 0;
+    margin: 0 3px;
+    &:before {
+      content: '';
+      font-family: $font-icon;
+      color: #fff;
+    }
+  }
+  //PAGER WITH AUTO-CONTROLS HYBRID LAYOUT
+  .bx-wrapper .bx-controls .bx-controls-auto {
+    right: 15px;
+    width: 35px;
+    top: 15px;
+    z-index: 998;
+  }
+  //IMAGE CAPTIONS
+  .bx-wrapper .bx-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #666 \9;
+    background: rgba(80, 80, 80, 0.75);
+    width: 100%;
+  }
+  .bx-wrapper .bx-caption span {
+    color: $light-text-color;
+    font-family: $font-family;
+    display: block;
+    font-size: .85em;
+    padding: 10px;
+  }
+}
+
+#bx-pager-thumb {
+  text-align: center;
+  padding: 10px 0;
+  a {
+    display: inline-block;
+    max-width: 150px;
+    width: 31%;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
