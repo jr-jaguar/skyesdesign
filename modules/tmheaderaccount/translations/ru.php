@@ -146,7 +146,7 @@ $_MODULE['<{tmheaderaccount}prestashop>tmheaderaccount-content_261ed9f602d575774
 $_MODULE['<{tmheaderaccount}prestashop>tmheaderaccount-content_e4eb5dadb6ee84c5c55a8edf53f6e554'] = 'Почтовый индекс';
 $_MODULE['<{tmheaderaccount}prestashop>tmheaderaccount-content_57d056ed0984166336b7879c2af3657f'] = 'Город';
 $_MODULE['<{tmheaderaccount}prestashop>tmheaderaccount-content_59716c97497eb9694541f7c3d37b1a4d'] = 'Страна';
-$_MODULE['<{tmheaderaccount}prestashop>tmheaderaccount-content_46a2a41cc6e552044816a2d04634545d'] = 'Штат';
+$_MODULE['<{tmheaderaccount}prestashop>tmheaderaccount-content_46a2a41cc6e552044816a2d04634545d'] = 'Область';
 $_MODULE['<{tmheaderaccount}prestashop>tmheaderaccount-content_0f68b904e33d9ac04605aecc958bcf52'] = 'Дополнительная информация';
 $_MODULE['<{tmheaderaccount}prestashop>tmheaderaccount-content_fe66abce284ec8589e7d791185b5c442'] = 'Домашний телефон';
 $_MODULE['<{tmheaderaccount}prestashop>tmheaderaccount-content_41c2fff4867cc204120f001e7af20f7a'] = 'Мобильный телефон';

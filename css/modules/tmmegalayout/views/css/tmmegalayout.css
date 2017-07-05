@@ -189,9 +189,6 @@
 
 * + .gray-background {
   margin-top: 50px; }
-  @media (min-width: 1200px) {
-    * + .gray-background {
-      margin-top: 119px; } }
 
 .wrapper + .gray-background {
   margin-top: 20px; }

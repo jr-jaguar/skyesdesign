@@ -176,35 +176,35 @@
 .pb-left-column {
   position: relative;
   background: $product-background;
-  padding: 170px 17% 50px 17%;
+  padding: 170px 0 50px 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   align-items: center;
   @media (min-width: $screen-xs-min) {
-    padding-left: 25%;
-    padding-right: 25%;
+    padding-left: 0;
+    padding-right: 0;
   }
   @media (min-width: $screen-sm-min) {
-    padding: 50px 5% 50px 15px;
+    padding: 50px 0 50px 5px;
     &:before {
       content: '';
       position: absolute;
       right: 100%;
-      left: -60px;
+      left: -100%;
       top: 0;
       bottom: 0;
       background: $product-background;
     }
   }
   @media (min-width: 1370px) {
-    padding-right: 7%;
-    padding-left: 5%;
+    padding-right: 0;
+    padding-left: 0;
   }
   @media (min-width: 1650px) {
-    padding-right: 185px;
-    padding-left: 140px;
+    padding-right: 0px;
+    padding-left: 0px;
   }
 
   #prev-img, #next-img {
@@ -583,7 +583,7 @@
     color: $dark-text-color;
     margin: 0;
     font: $font-heading;
-    font-size: 72px;
+    font-size: 42px;
     font-weight: bold;
     text-transform: uppercase;
     
@@ -1080,10 +1080,10 @@
     }
     #our_price_display {
       font-size: 40px;
-      font-weight: 700;
+      font-weight: 400;
       line-height: 1;
       @media (min-width: $screen-lg-min) {
-        font-size: 60px;
+        font-size: 55px;
       }
     }
     .discount {

@@ -7,6 +7,12 @@
 */
 #cms {
   #center_column {
+    .rte{
+      @media (max-width: 479px)  {
+        margin-top: 30px;
+        
+      }
+    }
     .material-design-ico, .fa {
       font: $font;
     }
@@ -36,7 +42,7 @@
     }
     h2 {
       text-transform: uppercase;
-      font: 700 30px/1.4 $font-custom;
+      font: 700 20px/1.4 $font-custom;
       color: $base-heading-color;
       &.icon:before {
         line-height: 45px;
@@ -96,7 +102,8 @@
       }
     }
     ul {
-      list-style: none;
+      margin-left: 30px;
+      color: #fff;
     }
     .animateCount {
       li {

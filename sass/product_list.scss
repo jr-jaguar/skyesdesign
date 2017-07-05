@@ -197,7 +197,7 @@ ul.product_list.grid {
         @include product-image;
         .product_img_link {
           display: block;
-          padding: 25px;
+          padding: 0;
         }
         @media (max-width: $screen-xs-min - 1) {
           .tmproductlistgallery-thumbnails {

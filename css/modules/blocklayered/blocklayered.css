@@ -80,7 +80,8 @@
       width: auto;
       float: none;
       position: relative;
-      outline: none; }
+      outline: none;
+      margin-left: 5px; }
       #layered_block_left #layered_form .layered_filter .layered_filter_ul.color-group li > a, #layered_block_left #layered_form .layered_filter .layered_filter_ul.color-group li > input {
         display: block;
         height: 26px;
@@ -137,7 +138,7 @@
         -moz-box-shadow: 0 0 0 2px #77a03f;
         box-shadow: 0 0 0 2px #77a03f; }
       #layered_block_left #layered_form .layered_filter .layered_filter_ul.color-group li + li {
-        margin-left: 10px; }
+        margin-left: 5px; }
     #layered_block_left #layered_form .layered_filter .layered_filter_ul.color-group li {
       margin-left: 10px;
       margin-top: 5px;

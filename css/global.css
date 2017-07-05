@@ -9348,9 +9348,10 @@ button:focus {
 
 #cmsinfo_block h2 {
   text-align: center;
-  font-size: 33px;
+  font-size: 28px;
   color: #414042;
-  margin-bottom: 30px; }
+  margin-bottom: 40px;
+  margin-top: 30px; }
 #cmsinfo_block .bg-block {
   min-height: 400px;
   background-size: cover; }
@@ -12538,20 +12539,6 @@ fieldset.customerprivacy label {
 #order-opc .cart_navigation {
   padding-left: 27px;
   margin-bottom: 0 !important; }
-#order-opc .social-login-buttons,
-#order-opc .date-select,
-#order-opc .gender-line,
-#order-opc #company,
-#order-opc #carrier_area,
-#order-opc #opc_payment_methods,
-#order-opc .page-heading.step-num,
-#order-opc #login_form,
-#order-opc label[for="company"],
-#order-opc label[for="invoice_address"],
-#order-opc label[for="newsletter"],
-#order-opc label[for="optin"],
-#order-opc label[for="allow_seperated_package"] {
-  display: none !important; }
 #order-opc #opc_new_account .box {
   box-shadow: none; }
 #order-opc #opc_new_account #new_account_title,

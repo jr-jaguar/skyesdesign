@@ -1,8 +1,9 @@
 #cmsinfo_block h2 {
   text-align: center;
-  font-size: 33px;
+  font-size: 28px;
   color: #414042;
-  margin-bottom: 30px; }
+  margin-bottom: 40px;
+  margin-top: 30px; }
 #cmsinfo_block .bg-block {
   min-height: 400px;
   background-size: cover; }

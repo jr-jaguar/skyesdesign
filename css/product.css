@@ -169,7 +169,7 @@
 .pb-left-column {
   position: relative;
   background: #f6f8f9;
-  padding: 170px 17% 50px 17%;
+  padding: 170px 0 50px 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -177,27 +177,27 @@
   align-items: center; }
   @media (min-width: 480px) {
     .pb-left-column {
-      padding-left: 25%;
-      padding-right: 25%; } }
+      padding-left: 0;
+      padding-right: 0; } }
   @media (min-width: 768px) {
     .pb-left-column {
-      padding: 50px 5% 50px 15px; }
+      padding: 50px 0 50px 5px; }
       .pb-left-column:before {
         content: '';
         position: absolute;
         right: 100%;
-        left: -60px;
+        left: -100%;
         top: 0;
         bottom: 0;
         background: #f6f8f9; } }
   @media (min-width: 1370px) {
     .pb-left-column {
-      padding-right: 7%;
-      padding-left: 5%; } }
+      padding-right: 0;
+      padding-left: 0; } }
   @media (min-width: 1650px) {
     .pb-left-column {
-      padding-right: 185px;
-      padding-left: 140px; } }
+      padding-right: 0px;
+      padding-left: 0px; } }
   .pb-left-column #prev-img, .pb-left-column #next-img {
     position: absolute;
     top: 50%;
@@ -517,7 +517,7 @@
     color: black;
     margin: 0;
     font: 400 33px/1.2 "Open Sans", serif;
-    font-size: 72px;
+    font-size: 42px;
     font-weight: bold;
     text-transform: uppercase; }
     .pb-right-column h1 .dynamic-styled-in-global-js.sorry-for-that {
@@ -675,7 +675,8 @@
         width: auto;
         float: none;
         position: relative;
-        outline: none; }
+        outline: none;
+        margin-left: 5px; }
         #attributes .attribute_list #color_to_pick_list li > a, #attributes .attribute_list #color_to_pick_list li > input {
           display: block;
           height: 26px;
@@ -732,7 +733,7 @@
           -moz-box-shadow: 0 0 0 2px #77a03f;
           box-shadow: 0 0 0 2px #77a03f; }
         #attributes .attribute_list #color_to_pick_list li + li {
-          margin-left: 10px; }
+          margin-left: 5px; }
 
 .box-info-product .ajax_add_to_cart_product_button:before {
   font-family: "FontAwesome"; }
@@ -985,11 +986,11 @@
       margin-top: 48px; } }
   .box-info-product .content_prices #our_price_display {
     font-size: 40px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1; }
     @media (min-width: 1200px) {
       .box-info-product .content_prices #our_price_display {
-        font-size: 60px; } }
+        font-size: 55px; } }
   .box-info-product .content_prices .discount {
     color: #f13340;
     margin-bottom: 20px;

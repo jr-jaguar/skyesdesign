@@ -124,6 +124,7 @@ $product-old-price-color: $color-gray-darken;
     float: none;
     position: relative;
     outline: none;
+    margin-left: 5px;
     > a, > input {
       display: block;
       height: 26px;
@@ -172,7 +173,7 @@ $product-old-price-color: $color-gray-darken;
       }
     }
     & + li {
-      margin-left: 10px;
+      margin-left: 5px;
     }
   }
 }

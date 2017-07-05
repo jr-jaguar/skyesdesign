@@ -44,10 +44,12 @@
       background: none;
       padding: 7px 16px 5px 0;
       font: $font-heading;
+      font-size: 28px;
       color: $color-heading;
       border: none;
       text-transform: none;
-      margin-bottom: 35px;
+      margin-bottom: 40px;
+      margin-top: 30px;
       letter-spacing: -0.72px;
       @media (max-width: 767px) {
         font-size: 18px;  
