@@ -53,7 +53,9 @@
       titleDinamicStyling($('#tm-products-slider .slide-info h3 a'));
       titleDinamicStyling($('#product h1'));
     })();
-
+    (function () {
+        
+    })
     /**
       Dynamic creation of popup window on Cart page for success buying
     */

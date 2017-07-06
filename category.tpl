@@ -5,6 +5,7 @@
     {if $products}
       <div class="content_sortPagiBar clearfix">
         <div class="sortPagiBar clearfix">
+          {*{include file="./breadcrumb.tpl"}*}
           {include file="./product-sort.tpl"}
           {include file="./product-compare.tpl" paginationId='bottom'}
           {include file="./nbr-product-page.tpl"}

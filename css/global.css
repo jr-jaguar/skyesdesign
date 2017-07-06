@@ -12536,9 +12536,29 @@ fieldset.customerprivacy label {
 /*
   Hidng all for cart page
 */
+#layer_cart span.unvisible,
+#layer_cart .ajax_cart_shipping_cost.unvisible {
+  display: none !important; }
+
 #order-opc .cart_navigation {
   padding-left: 27px;
   margin-bottom: 0 !important; }
+#order-opc .social-login-buttons,
+#order-opc .date-select,
+#order-opc .gender-line,
+#order-opc #company,
+#order-opc span.unvisible,
+#order-opc .cart_total_delivery,
+#order-opc .ajax_cart_shipping_cost.unvisible,
+#order-opc #login_form,
+#order-opc label[for="company"],
+#order-opc label[for="invoice_address"],
+#order-opc label[for="newsletter"],
+#order-opc label[for="optin"],
+#order-opc label[for="allow_seperated_package"] {
+  display: none !important; }
+#order-opc #message {
+  margin-top: 10px; }
 #order-opc #opc_new_account .box {
   box-shadow: none; }
 #order-opc #opc_new_account #new_account_title,

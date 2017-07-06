@@ -3611,6 +3611,13 @@ fieldset.customerprivacy label {
 /*
   Hidng all for cart page
 */
+
+#layer_cart{
+  span.unvisible,
+  .ajax_cart_shipping_cost.unvisible{
+    display: none !important;
+  }
+}
 #order-opc {
   .cart_navigation {
     padding-left: 27px;
@@ -3621,16 +3628,24 @@ fieldset.customerprivacy label {
   .date-select,
   .gender-line,
   #company,
-  #carrier_area,
-  #opc_payment_methods,
-  .page-heading.step-num,
+  //#carrier_area,
+  //#opc_payment_methods,
+  //.page-heading.step-num,
+    span.unvisible,
+  .cart_total_delivery,
+  .ajax_cart_shipping_cost.unvisible,
   #login_form,
   label[for="company"],
   label[for="invoice_address"],
   label[for="newsletter"],
   label[for="optin"],
   label[for="allow_seperated_package"] {
-    //display: none !important;
+    display: none !important;
+  }
+
+  #message{
+    margin-top: 10px;
+
   }
 
   #opc_new_account {

@@ -1,5 +1,6 @@
 {if isset($orderby) && isset($orderway)}
   <ul class="display">
+    {include file="./category-name.tpl"}
     <li id="grid">
       <a rel="nofollow" href="#" title="{l s='Grid'}" class="material-icons-view_module"></a>
     </li>
