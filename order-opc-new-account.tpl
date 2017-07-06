@@ -1,35 +1,35 @@
 <div id="opc_new_account" class="opc-main-block">
   <div id="opc_new_account-overlay" class="opc-overlay" style="display: none;"></div>
-  {*<h1 class="page-heading step-num"><span>1</span> {l s='Account'}</h1>*}
-  {*<form action="{$link->getPageLink('authentication', true, NULL, "back=order-opc")|escape:'html':'UTF-8'}" method="post" id="login_form" class="box">*}
-    {*<fieldset>*}
-      {*<h3 class="page-subheading">{l s='Already registered?'}</h3>*}
-      {*<p><a href="{$link->getPageLink('authentication', true)|escape:'html':'UTF-8'}" id="openLoginFormBlock">&raquo; {l s='Click here'}</a></p>*}
-      {*<div id="login_form_content" style="display:none;">*}
-        {*<!-- Error return block -->*}
-        {*<div id="opc_login_errors" class="alert alert-danger" style="display:none;"></div>*}
-        {*<!-- END Error return block -->*}
-        {*<p class="form-group">*}
-          {*<label for="login_email">{l s='Email address'}</label>*}
-          {*<input type="email" class="form-control validate" id="login_email" name="email" data-validate="isEmail" />*}
-        {*</p>*}
-        {*<p class="form-group">*}
-          {*<label for="login_passwd">{l s='Password'}</label>*}
-          {*<input class="form-control validate" type="password" id="login_passwd" name="login_passwd" data-validate="isPasswd" />*}
-        {*</p>*}
-        {*<a href="{$link->getPageLink('password', true)|escape:'html':'UTF-8'}" class="lost_password">{l s='Forgot your password?'}</a>*}
-        {*<p class="submit">*}
-          {*{if isset($back)}<input type="hidden" class="hidden" name="back" value="{$back|escape:'html':'UTF-8'}" />{/if}*}
-          {*<button type="submit" id="SubmitLogin" name="SubmitLogin" class="btn btn-default btn-md">*}
-            {*<span>*}
-              {*<i class="fa fa-lock left"></i>*}
-              {*{l s='Sign in'}*}
-            {*</span>*}
-          {*</button>*}
-        {*</p>*}
-      {*</div>*}
-    {*</fieldset>*}
-  {*</form>*}
+  <h1 class="page-heading step-num"><span>1</span> {l s='Account'}</h1>
+  <form action="{$link->getPageLink('authentication', true, NULL, "back=order-opc")|escape:'html':'UTF-8'}" method="post" id="login_form" class="box">
+    <fieldset>
+      <h3 class="page-subheading">{l s='Already registered?'}</h3>
+      <p><a href="{$link->getPageLink('authentication', true)|escape:'html':'UTF-8'}" id="openLoginFormBlock">&raquo; {l s='Click here'}</a></p>
+      <div id="login_form_content" style="display:none;">
+        <!-- Error return block -->
+        <div id="opc_login_errors" class="alert alert-danger" style="display:none;"></div>
+        <!-- END Error return block -->
+        <p class="form-group">
+          <label for="login_email">{l s='Email address'}</label>
+          <input type="email" class="form-control validate" id="login_email" name="email" data-validate="isEmail" />
+        </p>
+        <p class="form-group">
+          <label for="login_passwd">{l s='Password'}</label>
+          <input class="form-control validate" type="password" id="login_passwd" name="login_passwd" data-validate="isPasswd" />
+        </p>
+        <a href="{$link->getPageLink('password', true)|escape:'html':'UTF-8'}" class="lost_password">{l s='Forgot your password?'}</a>
+        <p class="submit">
+          {if isset($back)}<input type="hidden" class="hidden" name="back" value="{$back|escape:'html':'UTF-8'}" />{/if}
+          <button type="submit" id="SubmitLogin" name="SubmitLogin" class="btn btn-default btn-md">
+            <span>
+              <i class="fa fa-lock left"></i>
+              {l s='Sign in'}
+            </span>
+          </button>
+        </p>
+      </div>
+    </fieldset>
+  </form>
   <form action="{$link->getPageLink('authentication', true)|escape:'html':'UTF-8'}" method="post" id="new_account_form" class="std" autocomplete="on" autofill="on">
     <fieldset>
       <div class="box">
@@ -82,17 +82,17 @@
             <input type="password" class="text form-control validate" name="passwd" id="passwd" data-validate="isPasswd" />
             <span class="form_info">{l s='(five characters min.)'}</span>
           </div>
-          {*<div class="required clearfix gender-line">*}
-            {*<label>{l s='Social title'}</label>*}
-            {*{foreach from=$genders key=k item=gender}*}
-              {*<div class="radio-inline">*}
-                {*<input type="radio" name="id_gender" id="id_gender{$gender->id_gender}" value="{$gender->id_gender}"{if isset($smarty.post.id_gender) && $smarty.post.id_gender == $gender->id_gender || (isset($guestInformations) && $guestInformations.id_gender == $gender->id_gender)} checked="checked"{/if} />*}
-                {*<label for="id_gender{$gender->id_gender}" class="top">*}
-                  {*{$gender->name}*}
-                {*</label>*}
-              {*</div>*}
-            {*{/foreach}*}
-          {*</div>*}
+          <div class="required clearfix gender-line">
+            <label>{l s='Social title'}</label>
+            {foreach from=$genders key=k item=gender}
+              <div class="radio-inline">
+                <input type="radio" name="id_gender" id="id_gender{$gender->id_gender}" value="{$gender->id_gender}"{if isset($smarty.post.id_gender) && $smarty.post.id_gender == $gender->id_gender || (isset($guestInformations) && $guestInformations.id_gender == $gender->id_gender)} checked="checked"{/if} />
+                <label for="id_gender{$gender->id_gender}" class="top">
+                  {$gender->name}
+                </label>
+              </div>
+            {/foreach}
+          </div>
           <div class="required form-group">
             <label for="firstname">{l s='First name'} <sup>*</sup></label>
             <input type="text" class="text form-control validate" id="customer_firstname" name="customer_firstname" onblur="$('#firstname').val($(this).val());" data-validate="isName" value="{if isset($guestInformations) && isset($guestInformations.customer_firstname) && $guestInformations.customer_firstname}{$guestInformations.customer_firstname}{/if}" />
@@ -101,71 +101,71 @@
             <label for="lastname">{l s='Last name'} <sup>*</sup></label>
             <input type="text" class="form-control validate" id="customer_lastname" name="customer_lastname" onblur="$('#lastname').val($(this).val());" data-validate="isName" value="{if isset($guestInformations) && isset($guestInformations.customer_lastname) && $guestInformations.customer_lastname}{$guestInformations.customer_lastname}{/if}" />
           </div>
-          {*<div class="select form-group date-select">*}
-            {*<label>{l s='Date of Birth'}</label>*}
-            {*<div class="row">*}
-              {*<div class="col-xs-4">*}
-                {*<select id="days" name="days" class="form-control">*}
-                  {*<option value="">-</option>*}
-                  {*{foreach from=$days item=day}*}
-                    {*<option value="{$day|escape:'html':'UTF-8'}" {if isset($guestInformations) && isset($guestInformations.sl_day) && ($guestInformations.sl_day == $day)} selected="selected"{/if}>{$day|escape:'html':'UTF-8'}&nbsp;&nbsp;</option>*}
-                  {*{/foreach}*}
-                {*</select>*}
-                {**}
-                {*{l s='January'}*}
-                {*{l s='February'}*}
-                {*{l s='March'}*}
-                {*{l s='April'}*}
-                {*{l s='May'}*}
-                {*{l s='June'}*}
-                {*{l s='July'}*}
-                {*{l s='August'}*}
-                {*{l s='September'}*}
-                {*{l s='October'}*}
-                {*{l s='November'}*}
-                {*{l s='December'}*}
-                {**}
-              {*</div>*}
-              {*<div class="col-xs-4">*}
-                {*<select id="months" name="months" class="form-control">*}
-                  {*<option value="">-</option>*}
-                  {*{foreach from=$months key=k item=month}*}
-                    {*<option value="{$k|escape:'html':'UTF-8'}" {if isset($guestInformations) && isset($guestInformations.sl_month) && ($guestInformations.sl_month == $k)} selected="selected"{/if}>{l s=$month}&nbsp;</option>*}
-                  {*{/foreach}*}
-                {*</select>*}
-              {*</div>*}
-              {*<div class="col-xs-4">*}
-                {*<select id="years" name="years" class="form-control">*}
-                  {*<option value="">-</option>*}
-                  {*{foreach from=$years item=year}*}
-                    {*<option value="{$year|escape:'html':'UTF-8'}" {if isset($guestInformations) && isset($guestInformations.sl_year) && ($guestInformations.sl_year == $year)} selected="selected"{/if}>{$year|escape:'html':'UTF-8'}&nbsp;&nbsp;</option>*}
-                  {*{/foreach}*}
-                {*</select>*}
-              {*</div>*}
-            {*</div>*}
-          {*</div>*}
-          {*{if isset($newsletter) && $newsletter}*}
-            {*<div class="checkbox">*}
-              {*<input type="checkbox" name="newsletter" id="newsletter" value="1"{if isset($guestInformations) && isset($guestInformations.newsletter) && $guestInformations.newsletter} checked="checked"{/if} autocomplete="off"/>*}
-              {*<label for="newsletter">*}
-                {*{l s='Sign up for our newsletter!'}*}
-              {*</label>*}
-              {*{if array_key_exists('newsletter', $field_required)}*}
-                {*<sup> *</sup>*}
-              {*{/if}*}
-            {*</div>*}
-          {*{/if}*}
-          {*{if isset($optin) && $optin}*}
-            {*<div class="checkbox">*}
-              {*<input type="checkbox" name="optin" id="optin" value="1"{if isset($guestInformations) && isset($guestInformations.optin) && $guestInformations.optin} checked="checked"{/if} autocomplete="off"/>*}
-              {*<label for="optin">*}
-                  {*{l s='Receive special offers from our partners!'}*}
-              {*</label>*}
-              {*{if array_key_exists('optin', $field_required)}*}
-                {*<sup> *</sup>*}
-              {*{/if}*}
-            {*</div>*}
-          {*{/if}*}
+          <div class="select form-group date-select">
+            <label>{l s='Date of Birth'}</label>
+            <div class="row">
+              <div class="col-xs-4">
+                <select id="days" name="days" class="form-control">
+                  <option value="">-</option>
+                  {foreach from=$days item=day}
+                    <option value="{$day|escape:'html':'UTF-8'}" {if isset($guestInformations) && isset($guestInformations.sl_day) && ($guestInformations.sl_day == $day)} selected="selected"{/if}>{$day|escape:'html':'UTF-8'}&nbsp;&nbsp;</option>
+                  {/foreach}
+                </select>
+                {*
+                {l s='January'}
+                {l s='February'}
+                {l s='March'}
+                {l s='April'}
+                {l s='May'}
+                {l s='June'}
+                {l s='July'}
+                {l s='August'}
+                {l s='September'}
+                {l s='October'}
+                {l s='November'}
+                {l s='December'}
+                *}
+              </div>
+              <div class="col-xs-4">
+                <select id="months" name="months" class="form-control">
+                  <option value="">-</option>
+                  {foreach from=$months key=k item=month}
+                    <option value="{$k|escape:'html':'UTF-8'}" {if isset($guestInformations) && isset($guestInformations.sl_month) && ($guestInformations.sl_month == $k)} selected="selected"{/if}>{l s=$month}&nbsp;</option>
+                  {/foreach}
+                </select>
+              </div>
+              <div class="col-xs-4">
+                <select id="years" name="years" class="form-control">
+                  <option value="">-</option>
+                  {foreach from=$years item=year}
+                    <option value="{$year|escape:'html':'UTF-8'}" {if isset($guestInformations) && isset($guestInformations.sl_year) && ($guestInformations.sl_year == $year)} selected="selected"{/if}>{$year|escape:'html':'UTF-8'}&nbsp;&nbsp;</option>
+                  {/foreach}
+                </select>
+              </div>
+            </div>
+          </div>
+          {if isset($newsletter) && $newsletter}
+            <div class="checkbox">
+              <input type="checkbox" name="newsletter" id="newsletter" value="1"{if isset($guestInformations) && isset($guestInformations.newsletter) && $guestInformations.newsletter} checked="checked"{/if} autocomplete="off"/>
+              <label for="newsletter">
+                {l s='Sign up for our newsletter!'}
+              </label>
+              {if array_key_exists('newsletter', $field_required)}
+                <sup> *</sup>
+              {/if}
+            </div>
+          {/if}
+          {if isset($optin) && $optin}
+            <div class="checkbox">
+              <input type="checkbox" name="optin" id="optin" value="1"{if isset($guestInformations) && isset($guestInformations.optin) && $guestInformations.optin} checked="checked"{/if} autocomplete="off"/>
+              <label for="optin">
+                  {l s='Receive special offers from our partners!'}
+              </label>
+              {if array_key_exists('optin', $field_required)}
+                <sup> *</sup>
+              {/if}
+            </div>
+          {/if}
           <h3 class="page-subheading top-indent">{l s='Delivery address'}</h3>
           {$stateExist = false}
           {$postCodeExist = false}
@@ -279,12 +279,12 @@
           {/if}
           <input type="hidden" name="alias" id="alias" value="{l s='My address'}"/>
 
-          {*<div class="checkbox">*}
-            {*<input type="checkbox" name="invoice_address" id="invoice_address"{if (isset($smarty.post.invoice_address) && $smarty.post.invoice_address) || (isset($guestInformations) && isset($guestInformations.invoice_address) && $guestInformations.invoice_address)} checked="checked"{/if} autocomplete="off"/>*}
-            {*<label for="invoice_address">*}
-              {*{l s='Please use another address for invoice'}*}
-            {*</label>*}
-          {*</div>*}
+          <div class="checkbox">
+            <input type="checkbox" name="invoice_address" id="invoice_address"{if (isset($smarty.post.invoice_address) && $smarty.post.invoice_address) || (isset($guestInformations) && isset($guestInformations.invoice_address) && $guestInformations.invoice_address)} checked="checked"{/if} autocomplete="off"/>
+            <label for="invoice_address">
+              {l s='Please use another address for invoice'}
+            </label>
+          </div>
 
           <div id="opc_invoice_address" class="is_customer_param">
             {assign var=stateExist value=false}
